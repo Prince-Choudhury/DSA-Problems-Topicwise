@@ -12,11 +12,8 @@ void SwapAlternatesArr(int arr[], int n){
 
         i = i + 2;
     }
-
-    
-    
+ 
 }
-
 
 
 int main()

@@ -6,15 +6,11 @@ bool LinearSearch(int arr[], int size, int target){
     {
         if(arr[i]==target)
             return true;
-
-   
     }
     
     return false;    
    
 }
-
-
 
 int main(){
 
