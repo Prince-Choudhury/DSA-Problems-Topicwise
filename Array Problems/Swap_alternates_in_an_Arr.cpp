@@ -2,6 +2,7 @@
 #include <limits.h>
 using namespace std;
 
+
 void SwapAlternatesArr(int arr[], int n){
     int i = 0;
     while (i < n)
