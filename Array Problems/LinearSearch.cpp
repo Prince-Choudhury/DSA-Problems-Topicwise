@@ -28,9 +28,11 @@ int main(){
     
     if(LinearSearch(arr, 5, 4))
         cout<<"Element found"<<endl;
-
     else
-        cout<<"Element not found"<<endl;
+        cout<<"Element Not found "<<endl;
+
+    // OR cout<<"Searching 4 -> "<<LinearSearch(arr, 5, 4);
+    
 
     return 0;
 }
