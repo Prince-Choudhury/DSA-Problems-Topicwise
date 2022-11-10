@@ -1,4 +1,5 @@
 // Print Column wise Sum and maximum column sum
+//2D Array
 
 #include <iostream>
 #include <limits.h>
