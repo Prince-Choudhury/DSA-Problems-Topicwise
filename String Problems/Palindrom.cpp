@@ -1,37 +1,42 @@
 #include<iostream>
 #include<algorithm>
 #include<vector>
+#include <string.h>
 using namespace std;
 
+bool checkPalindrom(char str[], int n){
 
-bool checkPalindrom(string str1){
-
-    string str2 = "malayalam";;
     int s = 0;
-    int e = str1.length() -1;
-
-    while (s<e)
+    int e = n - 1;
+    while (s<=e)
     {
-        swap(str1[s], str1[e]);
-        s++;
-        e--;
+        if (str[s] != str[e])
+        {
+            return false;
+        }
+        
+        else{
+            s++;
+            e--;
+        }
+           
     }
-    
-    if (str1 == str2)
-    {
-        return true;
-    }
-    else    
-        return false;
-
+    return true;
 }
 
 int main()
 {
 
-    string str = "malayalam";
+    char a[10] = "NooN";
+    int len = strlen(a);
 
-    cout<<checkPalindrom(str);
+    cout<<"Palindrom or Not : "<<checkPalindrom(a, len);
 
     return 0;
 }
+
+
+
+
+
+

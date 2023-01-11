@@ -24,3 +24,30 @@ int main()
 
     return 0;
 }
+
+
+// GCD of array using vector
+
+
+/*
+int findGCD(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+
+        int maxi = -99999, mini = 999999;
+        for (auto i: nums)
+        {
+            mini = min(mini, i);
+            maxi = max(maxi, i);
+        }
+        
+        while (mini != maxi)
+        {
+            if (maxi > mini)
+                maxi -= mini;
+            else
+                mini -= maxi;
+        }
+        return mini;     
+        
+    }
+*/    
