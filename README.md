@@ -1,6 +1,6 @@
-# Love Babbar DSA Course
+# Data Structures and Algorithms
 
-This repository contains materials related to the Love Babbar DSA course. The course covers various topics related to data structures and algorithms, including arrays, linked lists, trees, graphs, sorting and searching algorithms, and more.
+This repository contains materials related to DSA. The course covers various topics related to data structures and algorithms, including arrays, linked lists, trees, graphs, sorting and searching algorithms, and more.
 
 # How to Use
 
