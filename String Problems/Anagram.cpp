@@ -42,8 +42,8 @@ bool checkAnagram(string str1, string str2){
 int main()
 {
 
-    string str1 = "prince";
-    string str2 = "crepin";
+    string str1 = "Prince";
+    string str2 = "ecrinP";
 
     cout<<checkAnagram(str1, str2);
 

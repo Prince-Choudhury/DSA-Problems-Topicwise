@@ -30,18 +30,16 @@ int MinPlatform(int arr[], int dep[], int n)
             i++;
         }
 
-        else if(arr[j]<=arr[i])
+        else 
         {
             platform--;
             j++;
-
         }
 
         ans = max(ans, platform);
     }
     
     return ans;
-
 }
 
 int main()

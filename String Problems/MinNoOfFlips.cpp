@@ -38,8 +38,10 @@ int main()
     string str = "0010";
 
     int ans0 = getFlips(str, '0');
+    cout<<ans0<<endl;
 
     int ans1 = getFlips(str, '1');
+    cout<<ans1<<endl;
 
     int ans = min(ans0, ans1);
 
