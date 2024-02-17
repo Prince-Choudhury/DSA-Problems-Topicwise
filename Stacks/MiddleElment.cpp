@@ -8,16 +8,16 @@ void solve(stack<int> &st, int &pos, int &ans){
         ans = st.top();
         return;
     }
-    else{
-        //ek case solve karunga
-        pos--;
-        int temp = st.top();
-        st.pop();
-        //Recursion
-        solve(st, pos, ans);
-        //Backtrack
-        st.push(temp);
-    }
+    
+    //ek case solve karunga
+    pos--;
+    int temp = st.top();
+    st.pop();
+    //Recursion
+    solve(st, pos, ans);
+    //Backtrack
+    st.push(temp);
+    
 }
 
 int getMiddleElement(stack<int> &st){
