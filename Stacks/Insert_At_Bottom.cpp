@@ -3,19 +3,21 @@
 using namespace std;
 
 void insertAtBottom(stack<int> &st, int &Ele){
+    //Base case
     if(st.empty()){
         st.push(Ele);
         return;
     }
 
+    //Ek case solve karunga
     int temp = st.top();
     st.pop();
+    //Recursion
     insertAtBottom(st, Ele);
+    //Backtrack
     st.push(temp);
 
 }
-
-
 
 int main(){
     stack<int>st;
