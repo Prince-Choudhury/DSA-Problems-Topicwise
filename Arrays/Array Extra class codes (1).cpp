@@ -1,4 +1,4 @@
-Segregate Negative Positive Numbers:
+// 1. Segregate Negative Positive Numbers:
 
 #include <iostream>
 using namespace std;
@@ -35,7 +35,7 @@ int main() {
   return 0;
 }
 
-Sort COlors:
+// 2. Sort COlors:
 
 class Solution {
 public:
@@ -68,7 +68,7 @@ public:
     }
 };
 
-Rotate Array:
+// 3. Rotate Array:
 
 class Solution {
 public:
@@ -85,7 +85,7 @@ public:
     }
 };
 
-Missing Number:
+// 4. Missing Number:
 
 class Solution {
 public:
@@ -103,7 +103,7 @@ public:
     }
 };
 
-ReArrange Array: 
+// 5. ReArrange Array: 
 
 
 class Solution {
@@ -135,7 +135,7 @@ public:
     }
 };
 
-Row with Maximum Ones:
+// 6. Row with Maximum Ones:
 
 
 class Solution {
@@ -173,7 +173,7 @@ public:
 };
 
 
-Rotate Image:
+// 7. Rotate Image:
 
 class Solution {
 public:
