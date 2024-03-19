@@ -1,4 +1,4 @@
-//find pivot index:
+// 1. find pivot index:
 
 #include <iostream>
 #include<vector>
@@ -49,7 +49,7 @@ int main() {
 }
 
 
-//search in a rotated and sorted array 
+// 2. search in a rotated and sorted array 
 class Solution {
 public:
 
@@ -116,7 +116,7 @@ public:
 };
 
 
-//find square root of a number 
+// 3. find square root of a number 
 class Solution {
 public:
 
@@ -149,7 +149,7 @@ public:
 };
 
 
-//binary search in a  2D matrix 
+// 4. binary search in a  2D matrix 
 class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
