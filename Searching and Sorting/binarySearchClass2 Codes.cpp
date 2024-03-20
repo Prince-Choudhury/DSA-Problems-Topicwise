@@ -149,7 +149,7 @@ public:
 };
 
 
-// 4. binary search in a  2D matrix 
+// 4. binary search in a  2D 
 class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
