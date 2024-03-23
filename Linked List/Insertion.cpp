@@ -105,7 +105,6 @@ int main(){
     insertAtTail(head, tail, 30);
     insertAtTail(head, tail, 40);
     insertAtTail(head, tail, 50);
-    insertAtTail(head, tail, 60);
     insertAtPosition(head, tail, 4, 35);
     printLL(head);
     cout<<lengthLL(head)<<endl;
