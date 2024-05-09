@@ -14,7 +14,7 @@ int main() {
   unordered_map<char,int> mapping;
   countCharacters(mapping,str);
 
-  for(auto i : mapping) {
+  for(auto i: mapping) {
     cout << i.first << " -> " <<i.second << endl;
   }
 

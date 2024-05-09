@@ -13,8 +13,8 @@ int main() {
   pair<string,int> q("dipansh",24);
 
   pair<string,int> r;
-  r.first = "arun";
-  r.second = 21;
+  q.first = "arun";
+  q.second = 21;
   //insertion 
   mapping.insert(p);
   mapping.insert(q);
