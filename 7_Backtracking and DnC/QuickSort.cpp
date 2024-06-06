@@ -76,7 +76,7 @@ int main() {
 	
 	quickSort(arr,s,e);
 
-	cout << "After merge sort: " << endl;
+	cout << "After quick sort: " << endl;
 	for(int i=0; i<size; i++) {
 		cout << arr[i] << " ";
 	}
