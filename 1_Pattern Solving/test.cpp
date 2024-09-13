@@ -27,7 +27,7 @@ int main(){
 
         for(int j = 1; j<=i; j++){
             cout<<start+j;
-            start = start-1;
+            
         }
         cout<<endl;
         

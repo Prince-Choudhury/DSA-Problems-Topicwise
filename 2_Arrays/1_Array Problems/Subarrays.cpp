@@ -6,9 +6,12 @@ using namespace std;
 void printAllSubarrays(int arr[], int n) {
     for (int i = 0; i < n; i++) {
         for (int j = i; j < n; j++) {
-           cout<<arr[j];
+            // Print the subarray from i to j
+            for (int k = i; k <= j; k++) {
+                cout << arr[k] << " ";
+            }
+            cout << endl;
         }
-        cout<<endl;
     }
 }
 
