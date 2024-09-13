@@ -19,12 +19,12 @@ void SwapAlternatesArr(int arr[], int n){
 
 int main()
 {
-    int arr[]={3, 24, 53, 2, 22, 98};
+    int arr[]={2, 7, 5, 6, 9, 8, 0};
 
-    SwapAlternatesArr(arr, 6);
+    SwapAlternatesArr(arr, 7);
     
     
-    for (int i = 0; i <6; i++)
+    for (int i = 0; i <7; i++)
     {
         cout << arr[i] << ' ';
     }
