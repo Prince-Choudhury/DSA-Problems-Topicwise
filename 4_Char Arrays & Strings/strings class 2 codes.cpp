@@ -1,4 +1,8 @@
-https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/description/
+#include<iostream>
+#include<vector>
+using namespace std;
+
+//https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/description/
 
 class Solution {
 public:
@@ -24,7 +28,7 @@ public:
 };
 
 
-https://leetcode.com/problems/remove-all-occurrences-of-a-substring/
+//https://leetcode.com/problems/remove-all-occurrences-of-a-substring/
 
 class Solution {
 public:
@@ -41,7 +45,7 @@ public:
 
 
 
-https://leetcode.com/problems/valid-palindrome-ii/
+//https://leetcode.com/problems/valid-palindrome-ii/
 
 class Solution {
 public:
@@ -87,7 +91,8 @@ public:
     }
 };
 
-https://leetcode.com/problems/palindromic-substrings/
+
+//https://leetcode.com/problems/palindromic-substrings/
 
 class Solution {
 public:

@@ -1,4 +1,8 @@
-https://leetcode.com/problems/find-and-replace-pattern/
+#include<iostream>
+#include<vector>
+using namespace std;
+
+//https://leetcode.com/problems/find-and-replace-pattern/
 
 class Solution {
 public:
@@ -42,7 +46,10 @@ public:
     }
 };
 
-https://leetcode.com/problems/decode-the-message/
+
+
+
+//https://leetcode.com/problems/decode-the-message/
 
 class Solution {
 public:
@@ -74,7 +81,9 @@ public:
 };
 
 
-https://leetcode.com/problems/minimum-amount-of-time-to-collect-garbage/
+
+
+//https://leetcode.com/problems/minimum-amount-of-time-to-collect-garbage/
 
 class Solution {
 public:
@@ -133,7 +142,10 @@ public:
     }
 };
 
-https://leetcode.com/problems/custom-sort-string/
+
+
+
+//https://leetcode.com/problems/custom-sort-string/
 
 class Solution {
 public:
@@ -156,4 +168,3 @@ public:
         return s;
     }
 };
-string Solution::str;
