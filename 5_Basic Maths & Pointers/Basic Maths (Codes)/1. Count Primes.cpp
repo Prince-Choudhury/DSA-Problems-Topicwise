@@ -1,3 +1,8 @@
+#include <iostream>
+#include<vector>
+using namespace std;
+
+
 // M1
 class Solution
 {

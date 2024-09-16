@@ -1,7 +1,8 @@
 #include <iostream>
-
+#include<vector>
 using namespace std;
 
+#define M 1000000007
 int fastExponentiation(int x, int n)
 {
     long long int ans = 1;
