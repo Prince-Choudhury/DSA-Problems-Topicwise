@@ -9,7 +9,7 @@ bool checkSorted(int arr[], int size, int index) {
 	}
 
 	//processing
-	if(arr[index] > arr[index-1]) {
+	if(arr[index] > arr[index-1]) {      //index starts from 1
 		//aage check krna padega ab
 		//ab recursion sambhalega
 		bool aageKaAns = checkSorted(arr, size, index+1);
@@ -20,6 +20,26 @@ bool checkSorted(int arr[], int size, int index) {
 		return false;
 	}
 }
+
+
+// OR
+bool checkSorted(int *arr, int size) {
+	//base case
+	if(size == 0 || size == 1) {
+		return true;
+	}
+
+	if(arr[0]>arr[1]){
+		return false;
+	}
+
+	else{
+		checkSorted(arr + 1, size-1);
+	}
+
+}
+
+
 
 void findSubsequences(string str, string output, int index, vector<string>& ans) {
 	//base case
