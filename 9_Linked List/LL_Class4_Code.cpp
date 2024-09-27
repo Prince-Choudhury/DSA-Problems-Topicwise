@@ -96,3 +96,45 @@ public:
         
     }
 };
+
+
+// 3. Remove loop in Linked List
+
+class Solution {
+public:
+    void removeLoop(Node* head){
+        
+        Node* slow = head;
+        Node* fast = head;
+
+        // Detecting loop using Floyd’s cycle detection algorithm
+        while (fast != NULL && fast->next != NULL) {
+            slow = slow->next;
+            fast = fast->next->next;
+
+            // Cycle detected
+            if (slow == fast) {
+                break;
+            }
+        }
+
+        // No cycle found
+        if (fast == NULL || fast->next == NULL) {
+            return;
+        }
+
+        // Reset slow to head to find the start of the loop
+        slow = head;
+
+        // Now fast and slow both move one step at a time
+        while (slow != fast) {
+            slow = slow->next;
+            fast = fast->next;
+        }
+
+        while (fast->next != slow) {
+            fast = fast->next;   
+        }
+        fast->next = NULL;  
+    }
+};
