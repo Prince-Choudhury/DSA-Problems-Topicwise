@@ -23,7 +23,7 @@ bool checkSorted(int arr[], int size, int index) {
 
 
 // OR
-bool checkSorted(int *arr, int size) {
+bool checkSorted(int *arr, int size) {  //int *arr or int arr[]
 	//base case
 	if(size == 0 || size == 1) {
 		return true;

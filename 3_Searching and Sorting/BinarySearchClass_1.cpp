@@ -180,6 +180,7 @@ public:
                 e = mid;
             }
             //mid update
+            mid = s + (e-s)/2;
             
         }
         return e;

@@ -1,7 +1,9 @@
+// 1. implement 2stack using 1 array
+
 #include <iostream>
 #include<stack>
 using namespace std;
-// implement 2stack using 1 array
+
 class Stack
 {
 public:
@@ -68,7 +70,59 @@ public:
         return arr[top1];
     }
 };
-// check for redundant bracjet
+
+
+
+// 2. Valid Parentheses
+
+class Solution {
+public:
+    bool isValid(string s) {
+        stack<char>st;
+        for(int i = 0; i<s.length(); i++){
+            char ch = s[i];
+
+            if(ch == '(' || ch == '[' || ch == '{'){
+                //for open bracket -> just push
+                st.push(ch);
+            }
+
+            else{
+                // Closing bracket
+                if(!st.empty()){
+                    if(ch == ')' && st.top() == '('){
+                        st.pop();
+                    }
+                    else if(ch == ']' && st.top() == '['){
+                        st.pop();
+                    }
+                    else if(ch == '}' && st.top() == '{'){
+                        st.pop();
+                    }
+                    else{
+                        return false;
+                    }
+                }
+                else{
+                    return false;
+                }
+            }
+        }
+
+        if(st.size() == 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+    }
+};
+
+
+
+
+// 3. check for redundant bracket
 bool checkRedundantBracket(string s)
 {
     stack<char> st;

@@ -1,9 +1,8 @@
 #include<iostream>
-#include<vector>
 using namespace std;
 
 
-//Reverse a linked list
+//1. Reverse a linked list
 
 /**
  * Definition for singly-linked list.
@@ -48,7 +47,7 @@ public:
 };
 
 
-///Middle of a linked list
+//2. Middle of a linked list
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -101,7 +100,7 @@ public:
 };
 
 
-///Palindrome Check Linked List
+// 3. Palindrome Check Linked List
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -172,7 +171,7 @@ ListNode* middleNode(ListNode* head) {
     }
 };
 
-///Cycle Check in Linked List
+// 4. Cycle Check in Linked List
 /**
  * Definition for singly-linked list.
  * struct ListNode {

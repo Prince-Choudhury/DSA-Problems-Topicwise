@@ -4,8 +4,6 @@
 #include<stack>
 using namespace std;
 
-/*
-
 void solve(stack<int> &st, int& pos, int &ans) {
   //base case
   if(pos == 1) {
@@ -63,7 +61,7 @@ int main() {
   return 0;
 }
 
-*/
+
 // Iterative Approach
 
 #include <iostream>

@@ -26,6 +26,13 @@ int getQuotient(int divisor, int dividend) {
   }
   return ans;
 }
+
+
+
+
+
+
+
  
 int searchNearlySorted(int arr[], int n, int target) {
   int s = 0;
@@ -54,6 +61,13 @@ int searchNearlySorted(int arr[], int n, int target) {
   }
   return -1;
 }
+
+
+
+
+
+
+
 
 int findOddOccuringElement(int arr[], int n) {
   int s = 0;
