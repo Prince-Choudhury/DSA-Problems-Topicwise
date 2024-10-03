@@ -1,5 +1,9 @@
-#include <bits/stdc++.h>
+//#include <bits/stdc++.h>
+#include<iostream>
+#include<deque>
 using namespace std;
+
+
 class CustomQueue
 {
     int *arr;
