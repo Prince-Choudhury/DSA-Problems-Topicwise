@@ -1,5 +1,9 @@
-#include <bits/stdc++.h>
+#include<iostream>
+#include<stack>
+#include<queue>
+#include<deque>
 using namespace std;
+
 void reverseQueue(queue<int> &q)
 {
     stack<int> st;
@@ -24,6 +28,9 @@ void reverseQueueRec(queue<int> &q)
     reverseQueueRec(q);
     q.push(top);
 }
+
+
+
 void reverseKEle(queue<int> &q, int k)
 {
     int n = q.size();
@@ -51,6 +58,9 @@ void reverseKEle(queue<int> &q, int k)
         q.push(front);
     }
 }
+
+
+
 void interleaveQueue(queue<int> &first)
 {
     queue<int> second;
@@ -74,6 +84,7 @@ void interleaveQueue(queue<int> &first)
         first.push(temp);
     }
 }
+
 
 // first -ve integer in every k window
 void PintFirstNeg(int *arr, int n, int k = 3)

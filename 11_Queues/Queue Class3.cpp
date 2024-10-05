@@ -1,6 +1,10 @@
 // Question 1: first non repeating character in a stream
-#include <bits/stdc++.h>
+#include<iostream>
+#include<stack>
+#include<queue>
+#include<deque>
 using namespace std;
+
 int main()
 {
     string str = "ababc";
@@ -40,6 +44,9 @@ int main()
     }
     return 0;
 }
+
+
+
 // Question 2: Gas Station Leetcode->134
 int canCompleteCircuit(vector<int> &gas, vector<int> &cost)
 {
@@ -61,6 +68,7 @@ int canCompleteCircuit(vector<int> &gas, vector<int> &cost)
     else
         return -1;
 }
+
 
 // Question 3:Sliding windows Maximum
 vector<int> maxSlidingWindow(vector<int> &nums, int k)

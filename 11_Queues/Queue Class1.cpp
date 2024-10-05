@@ -77,7 +77,7 @@ public:
     {
         if (front == 1)
         {
-            cout << "Noe lement in the Queue" << endl;
+            cout << "No element in the Queue" << endl;
             return -1;
         }
         else
@@ -107,6 +107,9 @@ public:
         delete[] arr;
     }
 };
+
+
+
 class CircularQueue
 {
 public:
@@ -193,6 +196,10 @@ public:
         delete[] arr;
     }
 };
+
+
+
+// Doubly Ended Queue
 class Dq
 {
 public:

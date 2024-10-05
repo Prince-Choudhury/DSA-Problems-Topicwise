@@ -1,6 +1,92 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include<stack>
 using namespace std;
-// next smaller element
+
+// 1. Min Stack
+
+
+class MinStack {
+public:
+    vector<pair<int, int>> st;  // Store value and corresponding minimum
+
+    MinStack() {
+        // Constructor initializes an empty stack
+    }
+
+    void push(int val) {
+        // Push value along with the current minimum
+        if(st.empty()) {
+            // If the stack is empty, the value itself is the minimum
+            st.push_back({val, val});
+        } else {
+            // Compare new value with the current minimum and update
+            int currentMin = st.back().second;
+            currentMin = min(currentMin, val);
+            st.push_back({val, currentMin});
+        }
+    }
+
+    void pop() {
+        // Remove the top element from the stack
+        st.pop_back();
+    }
+
+    int top() {
+        // Return the value of the top element
+        return st.back().first;
+    }
+
+    int getMin() {
+        // Return the minimum value associated with the top element
+        return st.back().second;
+    }
+};
+
+
+// OR 
+
+class MinStack {
+public:
+    vector<pair<int, int>>st;
+    MinStack() {
+        
+    }
+    
+    void push(int val) {
+        pair<int, int>p;
+        if(st.empty()){
+            p.first = val;
+            p.second = val;
+            st.push_back(p);
+        }
+
+        else{
+            p.first = val;
+            int puranaMin = st.back().second;
+            p.second = min(puranaMin, val);
+            st.push_back(p);
+        }
+    }
+    
+    void pop() {
+        st.pop_back();
+    }
+    
+    int top() {
+        pair<int, int>rightMostPair = st.back();
+        return rightMostPair.first;
+    }
+    
+    int getMin() {
+        pair<int, int>rightMostPair = st.back();
+        return rightMostPair.second;
+    }
+};
+
+
+// 2. next smaller element
+
 vector<int> nextSmaller(int *arr, int n)
 {
     stack<int> st;
@@ -18,7 +104,11 @@ vector<int> nextSmaller(int *arr, int n)
     }
     return ans;
 }
-// prev Smaller
+
+
+
+// 3. prev Smaller
+
 vector<int> prevSmaller(int *arr, int n)
 {
     stack<int> st;
@@ -57,7 +147,9 @@ int main()
     cout << endl;
     return 0;
 }
-// Largest rectangle in histogram
+
+
+// 4. Largest rectangle in histogram
 class Solution
 {
 public:
