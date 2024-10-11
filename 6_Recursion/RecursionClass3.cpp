@@ -1,3 +1,5 @@
+// 1. Check Array is sorted or not 
+
 #include <iostream>
 #include<vector>
 using namespace std;
@@ -41,6 +43,8 @@ bool checkSorted(int *arr, int size) {  //int *arr or int arr[]
 
 
 
+// 2. Subsequence
+
 void findSubsequences(string str, string output, int index, vector<string>& ans) {
 	//base case
 	if(index >= str.length()) {
@@ -72,6 +76,11 @@ void findSubsequences(string str, string output, int index, vector<string>& ans)
 	// output.push_back(ch);
 	// findSubsequences(str, output, index+1);
 }
+
+
+
+
+// 3. Binary Search using Recursion
 
 int binSearch(int arr[], int s, int e, int target) {
 	//base case
@@ -141,6 +150,39 @@ int main() {
 	return 0;
 }
 
+
+
+// 4. Maximize the cut Segments(GFG) - Pattern : Explore all possible ways
+
+int maximizeTheCuts(int n, int x, int y, int z){
+	if(n == 0){
+		return 0;
+	}
+
+	//Ham -ve length ka rod to kat nahi sakte therefor usse pahle
+	// hi include kar diya taki wo max. me count na ho
+	if(n < 0){
+		return INT_MIN;
+	}
+
+	// maine x len ka 1 segment cut kar liya and baaki recursion dekh lega
+	int option1 = 1 + maximizeTheCuts(n-x, x, y, z);
+
+	// maine y len ka 1 segment cut kar liya and baaki recursion dekh lega
+	int option2 = 1 + maximizeTheCuts(n-y, x, y, z);
+
+	// maine z len ka 1 segment cut kar liya and baaki recursion dekh lega
+	int option3 = 1 + maximizeTheCuts(n-z, x, y, z);
+
+	int finalAns = max(option1, max(option2, option2));
+	return finalAns;
+
+}
+
+
+
+// 5. Coin Change(Leetcode) - Pattern : Explore all possible ways
+
 //coin change
 class Solution {
 public:
@@ -185,7 +227,10 @@ public:
     }
 };
 
-//max sum of non-adjacent elements
+
+
+// 6. House Robber(Leetcode) - Pattern : Include/Exclude
+
 class Solution {
 public:
     int solve(vector<int>& nums, int size, int index) {
@@ -209,6 +254,33 @@ public:
         int ans = solve(nums, size, index);
         return ans;
 
-        
     }
 };
+
+
+// 7. max sum of non-adjacent elements - Pattern : Include/Exclude
+
+void solve(vector<int> &arr, int i, int sum, int &maxi){
+	//Base case
+	if(i>=arr.size()){
+		return;
+	}
+
+	// Include
+	solve(arr, i+2, sum + arr[i], maxi);
+
+	//Exclude
+	solve(arr, i+1, sum, maxi);
+}
+
+
+int main(){
+	vector<int> arr{1,2,3,1,3,5,8,1,9};
+	int sum = 0;
+	int maxi = INT_MIN;
+	int i = 0;
+	solve(arr, i, sum, maxi);
+	cout<<maxi<<endl;
+
+	return 0;
+}
