@@ -12,7 +12,9 @@ public:
         int ans = solveUsingRecursion(n-1) + solveUsingRecursion(n-2);
         return ans;
     }
-    //recursion + memo
+
+
+    // 1. recursion + memo
     int solveUsingMemoisation(int n, vector<int>& dp) {
         //base case
         if(n == 0)
@@ -33,7 +35,7 @@ public:
 
 
     
-    //tabulation method
+    // 2. tabulation method
     int solveUsingTabulation(int n) {
         //step1: create dp array
         vector<int> dp(n+1, -1);
@@ -58,6 +60,8 @@ public:
         return dp[n];
     }
 
+
+    // 3. Space Optimization
     int solveUsingTabulationSpaceOptimised(int n) {
         int prev = 0;
         if(n == 0) {
@@ -77,6 +81,8 @@ public:
         //return ans;
         return ans;
     }
+
+    
     int fib(int n) {
         // int ans = solveUsingRecursion(n);
         // return ans;

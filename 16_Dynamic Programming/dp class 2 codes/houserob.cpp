@@ -12,6 +12,8 @@ public:
         int ans = max(include, exclude);
         return ans;
     }
+
+
     //memo
     int solveUsingMem(vector<int>& nums, int index, vector<int>& dp) {
         //base case
@@ -29,6 +31,10 @@ public:
         dp[index] = max(include, exclude);
         return dp[index];
     }
+
+
+
+    
     //tabulation
     int solveUsingTabulation(vector<int>& nums) {
         int n = nums.size();
