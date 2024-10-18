@@ -1,3 +1,8 @@
+#include <iostream>
+#include<set>
+#include<string.h>
+using namespace std;
+
 // 1423. Maximum Points You Can Obtain from Cards
 
 class Solution {
@@ -236,6 +241,76 @@ class Solution {
                 mpp[arr[l]]--;
                 if(mpp[arr[l]] == 0){
                     mpp.erase(arr[l]);
+                }
+                
+                l++;
+            }
+            
+            if(mpp.size()<=2){
+                maxlen = max(maxlen, r-l+1);
+            }
+            r++;
+        }
+        
+        return maxlen;
+    }
+
+};
+
+
+
+// 340. Longest Substring with At Most K Distinct Characters 
+
+// Given a string s and an integer k, return the length of the 
+// longest substring of s that contains at most k distinct characters.
+// Input: s = "eceba", k = 2
+// Output: 3
+// Explanation: The substring is "ece" with length 3.
+
+
+
+
+// Brute Froce 
+class Solution {
+  public:
+    int LongestSubstr(string str) {
+        int maxlen = 0;
+        int n = str.length();
+        
+        for(int i = 0; i<n; i++){
+            set<int>st;
+            for(int j = i; j<n; j++){
+                st.insert(str[j]);
+                if(st.size()<=2){
+                    maxlen = max(maxlen, j-i+1);
+                }
+                else break;
+            }
+        }
+        
+        return maxlen;
+    }
+};
+
+
+//Optimized approach
+
+class Solution {
+  public:
+    int LongestSubstr(string str) {
+        int n = str.length();
+        int l = 0, r = 0;
+        int maxlen = 0;
+        unordered_map<int, int>mpp;
+        
+        while(r<n){
+            mpp[str[r]]++;
+            
+            //while(mpp.size()>2){
+            if(mpp.size()>2){
+                mpp[str[l]]--;
+                if(mpp[str[l]] == 0){
+                    mpp.erase(str[l]);
                 }
                 
                 l++;
